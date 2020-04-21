@@ -1,5 +1,27 @@
 ﻿Function Get-ASRoleMember
 {
+  <#
+    .SYNOPSIS
+    This cmdlet will get all members of a AS server role.
+
+    .DESCRIPTION
+    This cmdlet will get all members of a AS server role.
+
+    .PARAMETER SqlInstance
+    The name of the SQL server instance.
+
+    .PARAMETER role
+    Name of the AS server role.
+
+    .EXAMPLE
+    Get-ASRoleMember -SqlInstance Server\instance -role 'Administrators'
+    It will get all members of the role 'Administrators'.
+
+    .OUTPUTS
+    The cmdlet will output all members as object.
+  #>
+
+
   param(
     [string]$SqlInstance,
     [string]$role = 'Administrators' 
