@@ -1,5 +1,28 @@
 ﻿Function Add-ASRoleMember
 {
+  <#
+    .SYNOPSIS
+    This cmdlet will add a new member to a AS server role.
+
+    .DESCRIPTION
+    This cmdlet will add a new member to a AS server role.
+
+    .PARAMETER SqlInstance
+    The name of the SQL server instance.
+
+    .PARAMETER role
+    Name of the AS server role.
+
+    .PARAMETER user
+    Name of the user you want to add.
+    User and and group names without domain are accepted.
+
+    .EXAMPLE
+    Add-ASRoleMember -SqlInstance Server\instance -role 'Administrators' -user Value 'user'
+    It will add the 'user' to the role Administrators'.
+  #>
+
+
   param(
     [string]$SqlInstance,
     [string]$role = 'Administrators',
